@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const classes = useStyles();
 
   const onGithubIconClic = () => {

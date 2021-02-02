@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const Layout: React.FC = () => {
+const Layout = () => {
     const classes = useStyles();
 
     return (

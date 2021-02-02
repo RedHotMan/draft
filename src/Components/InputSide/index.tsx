@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputSide:React.FC = () => {
+const InputSide = () => {
     return <div>InputSide Component</div>;
 }
 

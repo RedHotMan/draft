@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PreviewSide: React.FC = () => {
+const PreviewSide = () => {
     return <div>PreviewSide Component</div>;
 };
 
