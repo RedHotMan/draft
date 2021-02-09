@@ -1,31 +1,28 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { RiSunLine, RiMoonFill, RiGithubFill } from "react-icons/ri";
 
-const useStyles = makeStyles(() => ({
-  title: {
-    flexGrow: 1,
-  },
-}));
+import  { StyledNavbar } from './style';
 
-const Navbar = () => {
-  const classes = useStyles();
+interface props {
+  currentTheme: 'light' | 'dark',
+  toggleTheme: () => void,
+}
 
-  const onGithubIconClic = () => {
+const Navbar: React.FC<props> = ({ currentTheme, toggleTheme }) => {
+  const onGithubIconClick = () => {
     window.open("https://github.com/RedHotMan/draft");
   }
 
   return (
-    <AppBar position="static">
-      <Toolbar variant="dense">
-        <Typography variant="h6" className={classes.title}>
-          Draft
-        </Typography>
-        <GitHubIcon fontSize="small" onClick={onGithubIconClic} />
-      </Toolbar>
-    </AppBar>
+    <StyledNavbar>
+      <h1 css={{ fontSize: '1rem' }}>Draft</h1>
+      <div>
+        {currentTheme === 'light' ? <RiSunLine css={{ width: '1.2rem', height: '1.2rem' }} onClick={() =>toggleTheme()} /> : <RiMoonFill css={{ width: '1.2rem', height: '1.2rem' }} onClick={() =>toggleTheme()} />}
+        <RiGithubFill css={{ width: '1.2rem', height: '1.2rem' }} onClick={onGithubIconClick} />
+      </div>
+    </StyledNavbar>
   )
 }
 
