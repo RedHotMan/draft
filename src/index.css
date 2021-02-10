@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.gutter-horizontal {
+  cursor: col-resize;
+  background-color: rgba(223, 166, 18, 0.4);
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Toolbar from "../Toolbar";
+
 const PreviewSide = () => {
-    return <div>PreviewSide Component</div>;
+    return <><Toolbar sideName={'Preview'} /></>;
 };
 
 export default PreviewSide;
