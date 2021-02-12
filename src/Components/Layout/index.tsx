@@ -12,6 +12,7 @@ import { darkTheme, lightTheme } from "../../themes";
 
 const Layout = () => {
     const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [content, setContent] = useState<string>('Placeholder');
 
     const toggleTheme = () => {
         setTheme(prevState => {
@@ -31,8 +32,8 @@ const Layout = () => {
                 flexDirection: "row",
                 height: "calc(100vh - 3rem)",
             }} sizes={[50, 50]} minSize={300}>
-                <InputSide />
-                <PreviewSide />
+                <InputSide content={content} />
+                <PreviewSide content={content} />
             </Split>
         </ThemeProvider>
     );

@@ -4,13 +4,13 @@ import React from 'react';
 import { StyledToolbar } from "./style";
 
 interface props {
-    sideName: string,
+    title: string,
 }
 
-const Toolbar: React.FC<props> = ({ sideName= 'Toolbar' }) => {
+const Toolbar: React.FC<props> = ({ title= 'Toolbar' }) => {
     return (
         <StyledToolbar>
-            <h2 css={{ fontSize: '0.7rem' }}>{sideName}</h2>
+            <h2 css={{ fontSize: '0.7rem', margin: 0 }}>{title}</h2>
         </StyledToolbar>
     )
 };
