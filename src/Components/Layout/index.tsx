@@ -32,7 +32,7 @@ const Layout = () => {
                 flexDirection: "row",
                 height: "calc(100vh - 3rem)",
             }} sizes={[50, 50]} minSize={300}>
-                <InputSide content={content} />
+                <InputSide content={content} setContent={setContent} />
                 <PreviewSide content={content} />
             </Split>
         </ThemeProvider>
