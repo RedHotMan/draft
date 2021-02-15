@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const StyledTextarea = styled.textarea`
     resize: none;
     height: 100%;
-    margin: 20px;
+    padding: 2rem;
     background-color: transparent;
     border: none;
     &:focus {

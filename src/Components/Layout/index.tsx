@@ -8,11 +8,12 @@ import Navbar from '../Navbar';
 import InputSide from '../InputSide';
 import PreviewSide from '../PreviewSide';
 
+import placeholder from "../../utils/placeholder";
 import { darkTheme, lightTheme } from "../../themes";
 
 const Layout = () => {
     const [theme, setTheme] = useState<'light' | 'dark'>('light');
-    const [content, setContent] = useState<string>('Placeholder');
+    const [content, setContent] = useState<string>(placeholder);
 
     const toggleTheme = () => {
         setTheme(prevState => {

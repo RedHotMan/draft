@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Preview = styled.div`
     height: 100%;
     overflow: auto;
-    margin: 20px;
+    padding: 2rem;
     &::-webkit-scrollbar {
         display: none;
     }
