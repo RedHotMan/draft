@@ -32,7 +32,7 @@ pre {
 
 /* Code blocks */
 pre {
-	padding: 1em;
+	padding: 0.7em;
 	margin: .5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
@@ -40,12 +40,12 @@ pre {
 
 :not(pre) > code,
 pre {
-	background: #272822;
+	background: #444950;
 }
 
 /* Inline code */
 :not(pre) > code {
-	padding: .1em;
+	padding: .2em;
 	border-radius: .3em;
 	white-space: normal;
 }

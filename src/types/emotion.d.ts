@@ -8,6 +8,9 @@ declare module '@emotion/react' {
         },
         toolbar: {
             background: string;
+        },
+        sides: {
+            background: string;
             color: string;
         };
     }

@@ -1,11 +1,12 @@
-/** @jsxImportSource @emotion/react */
 import React from 'react';
+
+import { StyledSideContainer } from './style';
 
 const SideContainer: React.FC = ({ children }) => {
     return (
-        <div css={{ display: 'flex', flexDirection: 'column', height: "100%" }}>
+        <StyledSideContainer>
             {children}
-        </div>
+        </StyledSideContainer>
     )
 };
 

@@ -9,6 +9,5 @@ export const StyledToolbar = styled.div({
     },
     props => ({
         backgroundColor: props.theme.toolbar.background,
-        color: props.theme.toolbar.color,
     })
 )

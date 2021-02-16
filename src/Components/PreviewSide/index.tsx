@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
 import React, { useEffect }  from 'react';
 import marked from "marked";
 import Prism from "prismjs";
-import '../../prism.css';
+import '../../assets/prism.css';
 
 import SideContainer from "../SideContainer";
 import Toolbar from "../Toolbar";
