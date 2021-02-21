@@ -2,7 +2,9 @@
 import React, { useState, useEffect }  from 'react';
 
 import Split from "react-split";
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider } from '@emotion/react';
+import SnackbarProvider from 'react-simple-snackbar';
+
 
 import Navbar from '../Navbar';
 import InputSide from '../InputSide';
@@ -48,7 +50,9 @@ const Layout = () => {
                    expandToMin={true}
                    gutterAlign="center"
             >
-                <InputSide content={content} setContent={setContent} />
+                <SnackbarProvider>
+                    <InputSide content={content} setContent={setContent} />
+                </SnackbarProvider>
                 <PreviewSide content={content} />
             </Split>
         </ThemeProvider>
