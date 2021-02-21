@@ -5,7 +5,8 @@ export const StyledToolbar = styled.div({
     padding: '0 0.5rem',
     textTransform: 'uppercase',
     display: 'flex',
-    alignItems: 'center',
+    justifyContent: 'space-between',
+    alignItems: 'center'
     },
     props => ({
         backgroundColor: props.theme.toolbar.background,
