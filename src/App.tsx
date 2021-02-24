@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import Layout from './Components/Layout/index';
 
-function App() {
-  return (
-    <Layout />
-  );
+function App(): ReactElement {
+    return <Layout />;
 }
 
 export default App;

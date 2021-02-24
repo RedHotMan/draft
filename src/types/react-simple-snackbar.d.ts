@@ -1,5 +1,4 @@
 declare module 'react-simple-snackbar' {
-
     export type SnackbarProviderProps = {
         children?: React.ReactChild | React.ReactChildren | JSX.Element | JSX.Element[];
     };
@@ -17,10 +16,15 @@ declare module 'react-simple-snackbar' {
      */
     type CloseSnackbar = () => void;
 
-    export type SnackbarPosition = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
+    export type SnackbarPosition =
+        | 'top-left'
+        | 'top-center'
+        | 'top-right'
+        | 'bottom-left'
+        | 'bottom-center'
+        | 'bottom-right';
 
     export interface SnackbarOptions {
-
         /**
          * A custom position for your Snackbar. The default value is bottom-center
          */
@@ -44,7 +48,10 @@ declare module 'react-simple-snackbar' {
         closeSnackbar: CloseSnackbar;
     }
 
-    export const withSnackbar: <P extends object>(Component: React.ComponentType<P>, options?: SnackbarOptions) => React.ComponentType<P & WithSnackbar>;
+    export const withSnackbar: <P extends Record<string, unknown>>(
+        Component: React.ComponentType<P>,
+        options?: SnackbarOptions,
+    ) => React.ComponentType<P & WithSnackbar>;
 
     export default SnackbarProvider;
 }

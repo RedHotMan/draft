@@ -5,23 +5,21 @@ export const useLocalStorage = <T>(key: string, initialValue: T): [string, typeo
         try {
             const item = localStorage.getItem(key);
             return item ? JSON.parse(item) : initialValue;
-        }
-        catch (e) {
+        } catch (e) {
             console.log(e);
             return initialValue;
         }
-    })
+    });
 
     const setValue = (value: T): void => {
         try {
-            const valueToStore = value instanceof  Function ? value(storedValue) : value;
+            const valueToStore = value instanceof Function ? value(storedValue) : value;
             setStoredValue(valueToStore);
             localStorage.setItem(key, JSON.stringify(valueToStore));
+        } catch (e) {
+            console.log(e);
         }
-        catch (e) {
-            console.log(e)
-        }
-    }
+    };
 
-    return [storedValue ,setValue]
-}
+    return [storedValue, setValue];
+};

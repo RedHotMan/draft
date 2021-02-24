@@ -1,15 +1,15 @@
-import React, { useEffect }  from 'react';
-import marked from "marked";
-import Prism from "prismjs";
+import React, { useEffect } from 'react';
+import marked from 'marked';
+import Prism from 'prismjs';
 import '../../assets/prism.css';
 
-import SideContainer from "../SideContainer";
-import Toolbar from "../Toolbar";
+import SideContainer from '../SideContainer';
+import Toolbar from '../Toolbar';
 
-import { Preview } from "./style";
+import { Preview } from './style';
 
 interface props {
-    content: string
+    content: string;
 }
 
 const PreviewSide: React.FC<props> = ({ content }) => {
@@ -20,7 +20,7 @@ const PreviewSide: React.FC<props> = ({ content }) => {
     return (
         <SideContainer>
             <Toolbar title={'Preview'} />
-            <Preview dangerouslySetInnerHTML={{ __html: marked(content)}} />
+            <Preview dangerouslySetInnerHTML={{ __html: marked(content) }} />
         </SideContainer>
     );
 };

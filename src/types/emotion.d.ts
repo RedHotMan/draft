@@ -5,10 +5,10 @@ declare module '@emotion/react' {
         navbar: {
             background: string;
             color: string;
-        },
+        };
         toolbar: {
             background: string;
-        },
+        };
         sides: {
             background: string;
             color: string;

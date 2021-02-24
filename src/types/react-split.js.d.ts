@@ -1,5 +1,5 @@
-declare module "react-split" {
-    import React, { ReactNode, ReactElement } from "react";
+declare module 'react-split' {
+    import React, { ReactNode, ReactElement } from 'react';
     export interface SplitProps extends React.HTMLProps<HTMLDivElement> {
         // Initial sizes of each element in percents or CSS values.
         sizes?: number[];
@@ -20,7 +20,7 @@ declare module "react-split" {
         dragInterval?: number;
 
         // Direction to split: horizontal or vertical.
-        direction?: "horizontal" | "vertical";
+        direction?: 'horizontal' | 'vertical';
 
         // Cursor to display while dragging.
         cursor?: string;
@@ -35,18 +35,18 @@ declare module "react-split" {
         onDragEnd?(): void;
 
         // Called to create each gutter element
-        gutter?(index: number, direction: "horizontal" | "vertical"): HTMLElement;
+        gutter?(index: number, direction: 'horizontal' | 'vertical'): HTMLElement;
 
         // Called to set the style of each element.
         elementStyle?(
-            dimension: "width" | "height",
+            dimension: 'width' | 'height',
             elementSize: number,
             gutterSize: number,
             index: number,
         ): CSSStyleDeclarationPartial;
 
         // Called to set the style of the gutter.
-        gutterStyle?(dimension: "width" | "height", gutterSize: number, index: number): CSSStyleDeclarationPartial;
+        gutterStyle?(dimension: 'width' | 'height', gutterSize: number, index: number): CSSStyleDeclarationPartial;
 
         children: ReactNode;
     }

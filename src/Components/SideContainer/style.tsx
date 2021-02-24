@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const StyledSideContainer = styled.div`
-    display: flex; 
+    display: flex;
     flex-direction: column;
     @media (max-width: 600px) {
         width: 100% !important;
@@ -9,4 +9,4 @@ export const StyledSideContainer = styled.div`
     @media (min-width: 600px) {
         height: 100% !important;
     }
-`
+`;
