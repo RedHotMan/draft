@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React  from 'react';
 
 import SideContainer from "../SideContainer";
 import Toolbar from "../Toolbar";
@@ -9,7 +9,7 @@ import { StyledTextarea } from './style';
 
 interface props {
     content: string
-    setContent: Dispatch<React.SetStateAction<string>>
+    setContent: (value: string) => void;
 }
 
 const snackbarOptions = {

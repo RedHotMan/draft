@@ -6,7 +6,7 @@ import { RiSunLine, RiMoonFill, RiGithubFill } from "react-icons/ri";
 import  { StyledNavbar } from './style';
 
 interface props {
-  currentTheme: 'light' | 'dark',
+  currentTheme: string,
   toggleTheme: () => void,
 }
 

@@ -10,30 +10,30 @@ import Navbar from '../Navbar';
 import InputSide from '../InputSide';
 import PreviewSide from '../PreviewSide';
 
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+
 import placeholder from "../../utils/placeholder";
 import { darkTheme, lightTheme } from "../../assets/themes";
 
 const Layout = () => {
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
-    const [content, setContent] = useState<string>(placeholder);
+    const [markdown, setMarkdown] = useLocalStorage<string>('markdown', placeholder);
+    const [theme, setTheme] = useLocalStorage<'light' | 'dark'>('theme', 'light');
     const [direction, setDirection] = useState<"horizontal" | "vertical">("horizontal");
 
     useEffect(() => {
+        if (markdown.length <= 0) {
+            setMarkdown(placeholder);
+        }
+
         const changeDirection = () => {
             setDirection(window.innerWidth < 600 ? "vertical" : "horizontal");
         };
         changeDirection();
         window.onresize = changeDirection;
-    })
+    }, []);
 
     const toggleTheme = () => {
-        setTheme(prevState => {
-            if (prevState === 'light') {
-                return 'dark';
-            }
-
-            return 'light';
-        })
+        setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
     return (
@@ -51,9 +51,9 @@ const Layout = () => {
                    gutterAlign="center"
             >
                 <SnackbarProvider>
-                    <InputSide content={content} setContent={setContent} />
+                    <InputSide content={markdown} setContent={setMarkdown} />
                 </SnackbarProvider>
-                <PreviewSide content={content} />
+                <PreviewSide content={markdown} />
             </Split>
         </ThemeProvider>
     );
