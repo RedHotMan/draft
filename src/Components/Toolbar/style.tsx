@@ -9,7 +9,7 @@ export const StyledToolbar = styled.div(
         justifyContent: 'space-between',
         alignItems: 'center',
     },
-    (props) => ({
-        backgroundColor: props.theme.toolbar.background,
+    ({ theme }) => ({
+        backgroundColor: theme.toolbar.background,
     }),
 );

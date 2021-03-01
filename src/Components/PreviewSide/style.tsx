@@ -6,8 +6,11 @@ export const Preview = styled.div(
         overflow: 'auto',
         padding: '2rem',
     },
-    (props) => ({
-        backgroundColor: props.theme.sides.background,
-        color: props.theme.sides.color,
+    ({ theme }) => ({
+        '& a': {
+            color: theme.sides.color,
+        },
+        backgroundColor: theme.sides.background,
+        color: theme.sides.color,
     }),
 );

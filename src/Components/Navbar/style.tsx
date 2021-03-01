@@ -8,8 +8,8 @@ export const StyledNavbar = styled.nav(
         height: '3rem',
         padding: '0 1rem',
     },
-    (props) => ({
-        backgroundColor: props.theme.navbar.background,
-        color: props.theme.navbar.color,
+    ({ theme }) => ({
+        backgroundColor: theme.navbar.background,
+        color: theme.navbar.color,
     }),
 );

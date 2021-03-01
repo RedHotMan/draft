@@ -17,8 +17,8 @@ export const StyledTextarea = styled.textarea(
             scrollbarWidth: 'none',
         },
     },
-    (props) => ({
-        backgroundColor: props.theme.sides.background,
-        color: props.theme.sides.color,
+    ({ theme }) => ({
+        backgroundColor: theme.sides.background,
+        color: theme.sides.color,
     }),
 );
