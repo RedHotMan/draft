@@ -17,7 +17,7 @@ import { darkTheme, lightTheme } from '../../assets/themes';
 const Layout: React.FC = () => {
     const [markdown, setMarkdown] = useLocalStorage<string>('markdown', placeholder);
     const [theme, setTheme] = useLocalStorage<'light' | 'dark'>('theme', 'light');
-    const [direction, setDirection] = useState<'horizontal' | 'vertical'>('horizontal');
+    const [direction, setDirection] = useState<'horizontal' | 'vertical'>('vertical');
 
     useEffect(() => {
         if (markdown.length <= 0) {
@@ -25,7 +25,7 @@ const Layout: React.FC = () => {
         }
 
         const changeDirection = () => {
-            setDirection(window.innerWidth < 600 ? 'vertical' : 'horizontal');
+            setDirection(window.innerWidth < 606 ? 'vertical' : 'horizontal');
         };
         changeDirection();
         window.onresize = changeDirection;

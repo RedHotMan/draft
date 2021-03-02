@@ -30,15 +30,15 @@ blockquote p {
   display: inline;
 }
 
-.gutter-horizontal {
+.gutter-horizontal, .gutter-vertical {
   cursor: col-resize;
   background-color: #ffd540;
   width: 10px !important;
   height: 100% !important;
 }
 
-@media (max-width: 600px){
-  .gutter-horizontal {
+@media (max-width: 605px){
+  .gutter-horizontal, .gutter-vertical {
     cursor: row-resize;
     width: 100% !important;
     height: 10px !important;
