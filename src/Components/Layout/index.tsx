@@ -24,12 +24,15 @@ const Layout: React.FC = () => {
             setMarkdown(placeholder);
         }
 
-        const changeDirection = () => {
-            setDirection(window.innerWidth < 606 ? 'vertical' : 'horizontal');
-        };
-        changeDirection();
         window.onresize = changeDirection;
+        window.ondeviceorientation = changeDirection;
+
+        changeDirection();
     }, []);
+
+    const changeDirection = () => {
+        setDirection(window.innerWidth < 606 ? 'vertical' : 'horizontal');
+    };
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');

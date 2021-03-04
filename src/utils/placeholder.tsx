@@ -4,45 +4,43 @@ const placeholder = `
 **Draft** is a markdown editor  
 You can check the code [here](https://github.com/RedHotMan/draft)
 
-## What you can dzo
+## What you can do
 
 1. #### Text style
-   * **Bold**
-   * *Italic*
-   * ~~Strike~~
-   * >Blockquote
+* **Bold**
+* *Italic*
+* ~~Strike~~
+* >Blockquote
 
 
 2. #### Code
-   * \`inline code\`
-   * Block code
-   \`\`\`javascript
-   import React from 'react';
-   \`\`\`
+* \`inline code\`
+* Block code
+\`\`\`javascript
+import React from 'react';
+\`\`\`
 
 
 3. #### Lists
-
 * Item
 * Item
-   * Child Item
-     * Child Item 1
-   * Child Item
+  * Child Item
+    * Child Item 1
+  * Child Item
    
 
 4. #### Tables
 
-  | Username      | Power         |
-  | ------------- |:-------------:|
-  | Goku          | 100           |
-  | Vegeta        | 99            |
-  | Gohan         | 92            |
+| Username      | Power         |
+| ------------- |:-------------:|
+| Goku          | 100           |
+| Vegeta        | 99            |
+| Gohan         | 92            |
 
 
 5. #### Links
-
-  Here is [the link](https://github.com/RedHotMan/draft)   
-  [A link with a title](https://github.com/RedHotMan/draft "Link title, just hover it")
+Here is [the link](https://github.com/RedHotMan/draft)   
+[A link with a title](https://github.com/RedHotMan/draft "Link title, just hover it")
 
 
 6. #### Images
@@ -50,7 +48,7 @@ You can check the code [here](https://github.com/RedHotMan/draft)
 
 
 7. #### More...
-  For more informations, you can visit this [page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-`.trim();
+For more informations, you can visit this [page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+`;
 
 export default placeholder;

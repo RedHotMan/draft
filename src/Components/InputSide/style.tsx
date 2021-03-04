@@ -6,6 +6,7 @@ export const StyledTextarea = styled.textarea(
         height: '100%',
         padding: '2rem',
         backgroundColor: 'transparent',
+        overflow: 'auto',
         border: 'none',
         '&:focus': {
             outline: 'none',
